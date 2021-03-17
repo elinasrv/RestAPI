@@ -26,8 +26,7 @@ namespace RestAPI.Extensions
         {
             //services.AddTransient<AppDbContext>();
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("RestAPI-in-memory"),ServiceLifetime.Transient);
-
-            //services.AddScoped<IBaseRepository,BaseRepository>();
+            
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
 
